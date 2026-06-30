@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Final Way Production</title>
+<meta name="description" content="Full portfolio: cinematography, photography, and edited work by Final Way Production.">
+<link rel="icon" href="images/logo.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animation.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="brand">
+    <img src="images/logo.png" alt="Final Way Production logo">
+    <span class="brand-text">Final Way<span>Production</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+
+<header class="page-header" id="top">
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="rule"></span><span class="eyebrow">Selected work</span></div>
+    <h1 class="section-title">The full<br><span class="accent">reel.</span></h1>
+    <p class="hero-sub">Every frame below is a placeholder — swap in your own photos and video links. Filter by discipline or browse everything.</p>
+  </div>
+</header>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all">All work</button>
+      <button class="filter-btn" data-filter="photo">Doctors</button>
+      <button class="filter-btn" data-filter="film">Promotion Vedio</button>
+      <button class="filter-btn" data-filter="edit">Celebrity</button>
+      <button class="filter-btn" data-filter="Document">Boutique</button>
+    </div>
+
+    <div class="frame-grid">
+
+      <!-- <div class="frame" tabindex="0" data-category="photo" data-title="Coastline, Dawn Series" data-exif="f/2.8 · 35mm · ISO 200">
+        <span class="frame-tick">FR. 001</span><span class="frame-cat">Photo</span>
+        <div class="frame-placeholder">
+            <img src="images/image_1.jpeg" alt="Coastline, Dawn Series" class="frame-image">
+        </div>
+        <div class="frame-overlay"><h4>Coastline, Dawn Series</h4><span class="exif">f/2.8 · 35mm · ISO 200</span></div>
+      </div>
+
+      <div class="frame" tabindex="0" data-category="film" data-title="Wildfire — Short Film" data-exif="ARRI Alexa Mini · 24fps · 2.39:1">
+        <span class="frame-tick">FR. 002</span><span class="frame-cat">Film</span>
+        <div class="frame-placeholder">
+            <img src="images/image_2.jpeg" alt="Coastline, Dawn Series" class="frame-image">
+        </div>
+        <div class="frame-overlay"><h4>Wildfire — Short Film</h4><span class="exif">ARRI Alexa Mini · 24fps · 2.39:1</span></div>
+      </div> -->
+
+      <!-- <div class="frame" tabindex="0" data-category="edit" data-title="Brand Film — Color Grade" data-exif="DaVinci Resolve · Rec.709 → Rec.2020">
+        <span class="frame-tick">FR. 003</span><span class="frame-cat">Edit</span>
+        <div class="frame-placeholder">
+             <img src="images/image_3.jpeg" alt="Coastline, Dawn Series" class="frame-image">         
+        </div>
+        <div class="frame-overlay"><h4>Brand Film — Color Grade</h4><span class="exif">DaVinci Resolve · Rec.709 → Rec.2020</span></div>
+      </div> -->
+
+      <!-- video -->
+      <div class="frame" tabindex="0" data-category="photo" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/VS_DR_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+      <div class="frame" tabindex="0" data-category="photo" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/VS_DR_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+      <!-- Documentory -->
+
+      <div class="frame" tabindex="0" data-category="photo" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/TG_DR_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+    <div class="frame" tabindex="0" data-category="photo" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/TG_DR_4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+      <div class="frame" tabindex="0" data-category="edit" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/GT_AC_5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+      <div class="frame" tabindex="0" data-category="edit" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/GT_AC_6.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+      <div class="frame" tabindex="0" data-category="edit" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/GT_AC_7.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+      <div class="frame" tabindex="0" data-category="edit" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/GT_AC_8.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+
+      <div class="frame" tabindex="0" data-category="edit" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/GT_AC_9.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+      <div class="frame" tabindex="0" data-category="Document" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/TV_BO_10.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+      <div class="frame" tabindex="0" data-category="Document" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/TV_BO_11.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+      <div class="frame" tabindex="0" data-category="edit" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/GT_B0_12.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+      <div class="frame" tabindex="0" data-category="edit" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/GT_AC_13.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+
+      <div class="frame" tabindex="0" data-category="edit" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/GT_AC_LANS_14.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+
+    <div class="frame youtube-frame" tabindex="0" data-category="film" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/prom_17.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+
+      <div class="frame youtube-frame" tabindex="0" data-category="film" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/prom_18.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+      <div class="frame youtube-frame" tabindex="0" data-category="film" data-title="Documentary Sound &amp; Cut" data-exif="Resolve Fairlight · 5.1 mix">
+        <span class="frame-tick">VD. 01</span>
+        <span class="frame-cat">Edit</span>
+
+        <div class="frame-placeholder">
+          <video class="frame-video" autoplay muted loop playsinline>
+            <source src="videos/prom_19.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="frame-overlay">
+          <h4>Documentary Sound &amp; Cut</h4>
+          <span class="exif">Resolve Fairlight · 5.1 mix</span>
+        </div>
+      </div>
+
+
+
+        <!-- VEDIO END -->
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>See something you like?</h2>
+    <p>Let's talk about bringing that same look to your next project.</p>
+    <a href="contact.html" class="btn btn-primary">Get in touch →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <a href="index.html" class="footer-brand">
+        <img src="images/logo.png" alt="Final Way Production logo">
+        <span class="brand-text">Final Way Production</span>
+      </a>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5>Site</h5>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <a href="mailto:Finalwayproduction@gmail.com">Email</a>
+          <a href="https://instagram.com/finalwayproduction" target="_blank" rel="noopener">Instagram</a>
+          <a href="tel:+10000000000">Phone</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Final Way Production. All rights reserved.</span>
+      <div class="foot-links"><a href="#top">Back to top</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox">
+  <button class="lightbox-close">Close ✕</button>
+  <div class="lightbox-inner">
+    <div class="lb-frame">Preview</div>
+    <div class="lb-meta"><h3>Title</h3><p>Metadata</p></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/gsap.js"></script>
+</body>
+</html>

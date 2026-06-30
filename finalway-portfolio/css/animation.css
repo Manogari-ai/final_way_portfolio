@@ -1,0 +1,163 @@
+/* ==========================================================================
+   FINAL WAY PRODUCTION — Animation Layer
+   Keyframes + reveal utility classes. Loaded after style.css.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Entrance keyframes ---------- */
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.25; }
+}
+
+@keyframes roadDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes sunGlow {
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(232,133,60,0.5)); }
+  50%      { filter: drop-shadow(0 0 18px rgba(232,133,60,0.85)); }
+}
+
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ---------- Hero sequence (staggered via inline delay or .delay-n) ---------- */
+
+.hero-eyebrow, .hero-title, .hero-sub, .hero-cta, .hero-meta {
+  opacity: 0;
+  animation: riseIn 0.9s ease forwards;
+}
+.hero-eyebrow { animation-delay: 0.1s; }
+.hero-title   { animation-delay: 0.25s; }
+.hero-sub     { animation-delay: 0.45s; }
+.hero-cta     { animation-delay: 0.6s; }
+.hero-meta    { animation-delay: 0.75s; }
+
+.page-header .hero-eyebrow,
+.page-header .section-title,
+.page-header .hero-sub {
+  opacity: 0;
+  animation: riseIn 0.8s ease forwards;
+}
+.page-header .hero-eyebrow   { animation-delay: 0.05s; }
+.page-header .section-title { animation-delay: 0.18s; }
+.page-header .hero-sub       { animation-delay: 0.35s; }
+
+/* ---------- Brand mark / logo glow ---------- */
+
+.brand img, .footer-brand img {
+  animation: sunGlow 4s ease-in-out infinite;
+}
+
+/* ---------- REC dot ---------- */
+
+.rec-dot { animation: pulseDot 1.8s infinite ease-in-out; }
+
+/* ---------- Scroll cue drop line ---------- */
+
+@keyframes dropLine {
+  0%   { transform: scaleY(0); transform-origin: top; }
+  50%  { transform: scaleY(1); transform-origin: top; }
+  51%  { transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+.scroll-cue .line { animation: dropLine 1.6s infinite ease-in-out; }
+
+/* ---------- Animated road path (hero background SVG) ---------- */
+
+.road-path {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: roadDraw 2.6s 0.3s cubic-bezier(.4,.1,.2,1) forwards;
+}
+
+/* ---------- Scroll-reveal utility classes (toggled by main.js via IntersectionObserver) ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(.2,.8,.2,1), transform 0.7s cubic-bezier(.2,.8,.2,1);
+}
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(.2,.8,.2,1);
+}
+.reveal-scale.in-view { opacity: 1; transform: scale(1); }
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.2,.8,.2,1);
+}
+.reveal-left.in-view { opacity: 1; transform: translateX(0); }
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.2,.8,.2,1);
+}
+.reveal-right.in-view { opacity: 1; transform: translateX(0); }
+
+/* Stagger children of a .reveal-group — JS adds .in-view sequentially via delay vars */
+.reveal-group > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(.2,.8,.2,1);
+  transition-delay: var(--stagger-delay, 0s);
+}
+.reveal-group.in-view > * { opacity: 1; transform: translateY(0); }
+
+/* ---------- Skill bar fill trigger (about page) ---------- */
+
+.skill-fill.in-view { width: var(--fill-target, 0%); }
+
+/* ---------- FAQ accordion ---------- */
+
+.faq-a { transition: max-height 0.35s ease; }
+
+/* ---------- Button / link micro-interactions ---------- */
+
+.btn, .submit-btn { will-change: transform; }
+
+.frame {
+  will-change: transform;
+}
+
+/* ---------- Page transition fade (body-level, toggled by main.js on load) ---------- */
+
+body.page-loaded { animation: fadeIn 0.5s ease; }

@@ -1,0 +1,1 @@
+Drop extra brand assets here (favicon variants, brand guidelines, etc.).
